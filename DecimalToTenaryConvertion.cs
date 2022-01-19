@@ -31,7 +31,6 @@ namespace CoherentSolutionsTask1
             while(number > 0)
             {
                 int remainder = number % 3;
-                remainder.ToString();
                 tenaryNumber = remainder + tenaryNumber;
                 number = number / 3;
             }

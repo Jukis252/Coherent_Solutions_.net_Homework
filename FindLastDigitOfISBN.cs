@@ -15,9 +15,7 @@ namespace CoherentSolutionsTask1
                 ISBN = ISBN + (10-index)*(arrayOfChars[index]-48);
             }
             int lastDigit = FindDigit(ISBN);
-            {
-                Console.WriteLine(inputNumber+lastDigit);
-            }
+            Console.WriteLine(inputNumber+lastDigit);
         }
 
         int FindDigit(int isbn)

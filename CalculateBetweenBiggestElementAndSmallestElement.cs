@@ -12,7 +12,7 @@ namespace CoherentSolutionsTask1
             int imputOfNumber = int.Parse(Console.ReadLine());
             for (int index = 0; index < imputOfNumber; index++)
             {
-                Console.WriteLine("Input "+(index+1)+" number: ");
+                Console.WriteLine("Input " + (index+1 )+ " number: ");
                 array.Add(int.Parse(Console.ReadLine()));
             }
             int MaxNumberPosition = BiggestElementPosition(array);
@@ -63,14 +63,14 @@ namespace CoherentSolutionsTask1
             {
                 for(int index = smallestPosition; index <= biggestPosition;index++)
                 {
-                    Sum=Sum+array[index];
+                    Sum = Sum + array[index];
                 }
             }
             else
             {
                 for(int index = biggestPosition; index <= smallestPosition;index++)
                 {
-                    Sum=Sum+array[index];
+                    Sum = Sum + array[index];
                 }
             }
             return Sum;

@@ -5,7 +5,7 @@ namespace HW2_Task2.Entities
     internal class Training
     {
         private string Description { get; set; }
-        private Activitys[] ArrayOfTraining { get; set; }
+        private Activities[] ArrayOfTraining { get; set; }
         private int AddedTrainings { get; set; }
 
         private const int Size = 3;
@@ -13,11 +13,11 @@ namespace HW2_Task2.Entities
         public Training(string description)
         {
             Description = description;
-            ArrayOfTraining = new Activitys[Size];
+            ArrayOfTraining = new Activities[Size];
             AddedTrainings = 0;
         }
 
-        public void Addition(Activitys arrayOfTraining)
+        public void Addition(Activities arrayOfTraining)
         {
             if (AddedTrainings < Size)
             {
@@ -58,7 +58,7 @@ namespace HW2_Task2.Entities
         public override string ToString()
         {
             StringBuilder sb;
-            sb = new StringBuilder("Description: " + Description + "\n Training activity's: \n");
+            sb = new StringBuilder("Description: " + Description + "\n Training activities: \n");
             foreach (var training in ArrayOfTraining)
             {
                 sb.Append(training + "\n");

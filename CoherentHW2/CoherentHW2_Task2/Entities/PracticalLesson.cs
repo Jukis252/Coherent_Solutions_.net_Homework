@@ -1,27 +1,27 @@
 ﻿namespace HW2_Task2.Entities
 {
-    internal class PracticalLesson : Activitys
+    internal class PracticalLesson : Activities
     {
         private string Description { get; set; }
         private string TaskCondition { get; set; }
-        public string TaskSoliution { get; set; }
+        public string TaskSolution { get; set; }
 
 
       public PracticalLesson(string description, string condition, string solution)
         {
             Description = description;
             TaskCondition = condition;
-            TaskSoliution = solution;
+            TaskSolution = solution;
         }
 
         public override string ToString()
         {
-            return $"Descripition: {Description}\n Task Condition: {TaskCondition}\n Task Solution: {TaskSoliution}";
+            return $"Descripition: {Description}\n Task Condition: {TaskCondition}\n Task Solution: {TaskSolution}";
         }
 
         public override Activitys Clone()
         {
-            return new PracticalLesson(this.Description, this.TaskCondition, this.TaskSoliution);
+            return new PracticalLesson(this.Description, this.TaskCondition, this.TaskSolution);
         }
     }
 }

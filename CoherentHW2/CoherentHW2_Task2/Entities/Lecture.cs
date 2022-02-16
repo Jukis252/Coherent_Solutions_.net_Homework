@@ -1,6 +1,6 @@
 ﻿namespace HW2_Task2.Entities
 {
-    internal class Lecture : Activitys
+    internal class Lecture : Activities
     {
         private string Description { get; set; }
         private string Topic { get; set; }
@@ -16,7 +16,7 @@
             return $"Description: {Description}, topic: {Topic}";
         }
 
-        public override Activitys Clone()
+        public override Activities Clone()
         {
             return new Lecture(this.Description, this.Topic);
         }

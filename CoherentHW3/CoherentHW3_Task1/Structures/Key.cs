@@ -46,13 +46,13 @@
 
         public int CompareTo(Key other)
         {
-            int octaveComparisonResult = _octave.CompareTo(other._octave);
+            int ComparisonResult = _octave.CompareTo(other._octave);
 
-            if (octaveComparisonResult == 1)
+            if (ComparisonResult == 1)
             {
                 return 1;
             }
-            else if (octaveComparisonResult == -1)
+            else if (ComparisonResult == -1)
             {
                 return -1;
             }
@@ -76,7 +76,7 @@
 
         public override string ToString()
         {
-            return $"Key: _note {_note} {_alterationSign} from {_octave} octave";
+            return $"Key: Note {_note} {_alterationSign} from {_octave} octave";
         }
     }
 }

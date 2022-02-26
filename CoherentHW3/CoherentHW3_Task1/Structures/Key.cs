@@ -1,36 +1,5 @@
 ﻿namespace CoherentHW3_Task1.Structures
 {
-
-    enum Octave
-    {
-        SubContra,
-        Contra,
-        Great,
-        Small,
-        OneLine,
-        TwoLine,
-        ThreeLine,
-        FourLine,
-        FiveLine
-    }
-
-    enum Note
-    {
-        C,
-        D,
-        E,
-        F,
-        G,
-        A,
-        B
-    }
-
-    enum AlterationSign
-    {
-        NoSign,
-        Sharp,
-        Flat
-    }
     struct Key : IComparable<Key>
     {
         private readonly Octave _octave;
@@ -46,13 +15,13 @@
 
         public int CompareTo(Key other)
         {
-            int ComparisonResult = _octave.CompareTo(other._octave);
+            int comparisonResult = _octave.CompareTo(other._octave);
 
-            if (ComparisonResult == 1)
+            if (comparisonResult == 1)
             {
                 return 1;
             }
-            else if (ComparisonResult == -1)
+            else if (comparisonResult == -1)
             {
                 return -1;
             }

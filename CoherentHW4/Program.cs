@@ -15,12 +15,6 @@ namespace CoherentHW4
                 firstDiagonalMatrix[i,i] = value++;
             }
 
-            /*firstDiagonalMatrix[0,0] = 1;
-            firstDiagonalMatrix[1,1] = 2;
-            firstDiagonalMatrix[2,2] = 3;
-            firstDiagonalMatrix[3,3] = 4;
-            firstDiagonalMatrix[4,4] = 5;*/
-
             var secondDiagonalMatrix = new DiagonalMatrix<int>(3);
             for (int i = 0; i < secondDiagonalMatrix.Size; i++)
             {

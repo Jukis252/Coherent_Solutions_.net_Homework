@@ -19,16 +19,14 @@ public class Logger
 
         if (obj.GetType().GetCustomAttribute<TrackingEntity>() != null)
         {
-            foreach (var fieldInfo in obj.GetType().GetFields()
-                         .Where(p => p.GetCustomAttribute<TrackingProperty>() != null))
+            foreach (var fieldInfo in obj.GetType().GetFields().Where(p => p.GetCustomAttribute<TrackingProperty>() != null))
             {
                 var fieldName = fieldInfo.GetCustomAttribute<TrackingProperty>()?.PropertyName ?? fieldInfo.Name;
 
                 objTracked.Add(fieldName, fieldInfo.GetValue(obj)?.ToString());
             }
 
-            foreach (var propertyInfo in obj.GetType().GetProperties()
-                         .Where(p => p.GetCustomAttribute<TrackingProperty>() != null))
+            foreach (var propertyInfo in obj.GetType().GetProperties().Where(p => p.GetCustomAttribute<TrackingProperty>() != null))
             {
                 var propertyName = propertyInfo.GetCustomAttribute<TrackingProperty>()?.PropertyName ?? propertyInfo.Name;
 
